@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --inline --hot",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test:watch": "npm run test -- --watch"
   },
@@ -26,12 +27,18 @@
     "jsdom": "^11.3.0",
     "mocha": "^4.0.1",
     "react-hot-loader": "^3.1.1",
-    "webpack": "^3.8.1",
+    "webpack": "^2.7.0",
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "history": "^4.7.2",
     "immutable": "^3.8.2",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react.pure.component": "^1.2.0"
   }
 }
