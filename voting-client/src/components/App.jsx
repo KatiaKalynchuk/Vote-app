@@ -5,6 +5,15 @@ const pair = List.of('The Witcher', 'Dragon Age');
 
 export default class App extends Component {
     render() {
-        return React.cloneElement(this.props.children, {pair: pair})
+
+        let children = React.Children.map(this.props.children, function (child) {
+            return React.cloneElement(child, {pair: pair});
+        });
+        console.log(children);
+        return (
+            <div>
+                {children}
+            </div>
+        );
     }
 }
